@@ -1,8 +1,6 @@
 import React from "react";
 import { MdSearch, MdAdd } from "react-icons/md";
 
-import { ButtonTypes } from "../constants/constants";
-
 const IconStyle = {
   fontSize: "24px",
   marginRight: "5px",
@@ -22,40 +20,13 @@ function Toolbar(props) {
             marginLeft: "10px",
           }}
         >
-          {props.itemsLeft}items left
+          3 items left
         </span>
       </div>
       <div className="TodoApp__button_group">
-        <div
-          onClick={props.onClickAll}
-          className={
-            props.selectedButton === ButtonTypes.ALL
-              ? "TodoApp__button_border"
-              : ""
-          }
-        >
-          All
-        </div>
-        <div
-          onClick={props.onClickIncomplete}
-          className={
-            props.selectedButton === ButtonTypes.INCOMPLETE
-              ? "TodoApp__button_border"
-              : ""
-          }
-        >
-          Incomplete
-        </div>
-        <div
-          onClick={props.onClickCompleted}
-          className={
-            props.selectedButton === ButtonTypes.COMPLETE
-              ? "TodoApp__button_border"
-              : ""
-          }
-        >
-          Completed
-        </div>
+        <div className={"TodoApp__button_border"}>All</div>
+        <div className={""}>Incomplete</div>
+        <div className={""}>Completed</div>
       </div>
     </div>
   );
